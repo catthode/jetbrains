@@ -1,0 +1,79 @@
+<scheme name="Catthode" version="142" parent_scheme="Darcula">
+  <metaInfo>
+    <property name="created">2026-09-06T00:00:00</property>
+    <property name="ide">idea</property>
+    <property name="ideVersion">2022.3.0.0</property>
+    <property name="modified">2026-09-06T00:00:00</property>
+    <property name="originalScheme">Catthode</property>
+  </metaInfo>
+  <option name="FONT_SCALE" value="1.0" />
+  <colors>
+    <option name="CARET_COLOR" value="ff9e3b" />
+    <option name="CARET_ROW_COLOR" value="141414" />
+    <option name="CONSOLE_BACKGROUND_KEY" value="000000" />
+    <option name="GUTTER_BACKGROUND" value="000000" />
+    <option name="INDENT_GUIDE" value="2d2d2d" />
+    <option name="LINE_NUMBERS_COLOR" value="757575" />
+    <option name="METHOD_SEPARATORS_COLOR" value="2d2d2d" />
+    <option name="RIGHT_MARGIN_COLOR" value="2d2d2d" />
+    <option name="SELECTED_INDENT_GUIDE" value="636363" />
+    <option name="SELECTION_BACKGROUND" value="2d2d2d" />
+    <option name="WHITESPACES" value="2d2d2d" />
+  </colors>
+  <attributes>
+    <option name="BAD_CHARACTER">
+      <value><option name="FOREGROUND" value="000000" /><option name="BACKGROUND" value="ff6b6b" /></value>
+    </option>
+    <option name="BLOCK_COMMENT">
+      <value><option name="FOREGROUND" value="b3b3b3" /><option name="FONT_TYPE" value="2" /></value>
+    </option>
+    <option name="BRACES"><value><option name="FOREGROUND" value="ffffff" /></value></option>
+    <option name="BRACKETS"><value><option name="FOREGROUND" value="ffffff" /></value></option>
+    <option name="CLASS_NAME"><value><option name="FOREGROUND" value="fae2c8" /><option name="FONT_TYPE" value="1" /></value></option>
+    <option name="COMMA"><value><option name="FOREGROUND" value="b3b3b3" /></value></option>
+    <option name="CONSTANT"><value><option name="FOREGROUND" value="eba4be" /></value></option>
+    <option name="DEFAULT_ATTRIBUTE"><value><option name="FOREGROUND" value="9cd9e6" /></value></option>
+    <option name="DEFAULT_CLASS_NAME"><value><option name="FOREGROUND" value="fae2c8" /></value></option>
+    <option name="DEFAULT_CONSTANT"><value><option name="FOREGROUND" value="eba4be" /></value></option>
+    <option name="DEFAULT_ENTITY"><value><option name="FOREGROUND" value="aee6d6" /></value></option>
+    <option name="DEFAULT_FUNCTION_CALL"><value><option name="FOREGROUND" value="ff9e3b" /></value></option>
+    <option name="DEFAULT_FUNCTION_DECLARATION"><value><option name="FOREGROUND" value="ff9e3b" /></value></option>
+    <option name="DEFAULT_GLOBAL_VARIABLE"><value><option name="FOREGROUND" value="e8e8e8" /></value></option>
+    <option name="DEFAULT_IDENTIFIER"><value><option name="FOREGROUND" value="e8e8e8" /></value></option>
+    <option name="DEFAULT_INSTANCE_FIELD"><value><option name="FOREGROUND" value="9cd9e6" /></value></option>
+    <option name="DEFAULT_INSTANCE_METHOD"><value><option name="FOREGROUND" value="ff9e3b" /></value></option>
+    <option name="DEFAULT_INTERFACE_NAME"><value><option name="FOREGROUND" value="fae2c8" /></value></option>
+    <option name="DEFAULT_KEYWORD"><value><option name="FOREGROUND" value="ffb86c" /><option name="FONT_TYPE" value="1" /></value></option>
+    <option name="DEFAULT_LABEL"><value><option name="FOREGROUND" value="aee6d6" /></value></option>
+    <option name="DEFAULT_LOCAL_VARIABLE"><value><option name="FOREGROUND" value="e8e8e8" /></value></option>
+    <option name="DEFAULT_METADATA"><value><option name="FOREGROUND" value="d9b98c" /></value></option>
+    <option name="DEFAULT_NUMBER"><value><option name="FOREGROUND" value="f08d49" /></value></option>
+    <option name="DEFAULT_OPERATION_SIGN"><value><option name="FOREGROUND" value="f08d49" /></value></option>
+    <option name="DEFAULT_PARAMETER"><value><option name="FOREGROUND" value="d9b98c" /></value></option>
+    <option name="DEFAULT_PREDEFINED_SYMBOL"><value><option name="FOREGROUND" value="eba4be" /></value></option>
+    <option name="DEFAULT_STATIC_FIELD"><value><option name="FOREGROUND" value="eba4be" /></value></option>
+    <option name="DEFAULT_STATIC_METHOD"><value><option name="FOREGROUND" value="ff9e3b" /></value></option>
+    <option name="DEFAULT_STRING"><value><option name="FOREGROUND" value="b9d665" /></value></option>
+    <option name="DEFAULT_TAG"><value><option name="FOREGROUND" value="ffb86c" /></value></option>
+    <option name="DEFAULT_TEMPLATE_LANGUAGE_COLOR"><value><option name="BACKGROUND" value="141414" /></value></option>
+    <option name="DEFAULT_VALID_STRING_ESCAPE"><value><option name="FOREGROUND" value="aee6d6" /></value></option>
+    <option name="DOC_COMMENT"><value><option name="FOREGROUND" value="b3b3b3" /><option name="FONT_TYPE" value="2" /></value></option>
+    <option name="DOC_COMMENT_TAG"><value><option name="FOREGROUND" value="d9b98c" /></value></option>
+    <option name="ERRORS_ATTRIBUTES"><value><option name="EFFECT_COLOR" value="ff6b6b" /><option name="EFFECT_TYPE" value="4" /></value></option>
+    <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES"><value><option name="BACKGROUND" value="2d2d2d" /></value></option>
+    <option name="INLINE_PARAMETER_HINT"><value><option name="FOREGROUND" value="b3b3b3" /><option name="BACKGROUND" value="141414" /></value></option>
+    <option name="KEYWORD"><value><option name="FOREGROUND" value="ffb86c" /><option name="FONT_TYPE" value="1" /></value></option>
+    <option name="LINE_COMMENT"><value><option name="FOREGROUND" value="b3b3b3" /><option name="FONT_TYPE" value="2" /></value></option>
+    <option name="MATCHED_BRACE_ATTRIBUTES"><value><option name="FOREGROUND" value="fae2c8" /><option name="BACKGROUND" value="2d2d2d" /><option name="FONT_TYPE" value="1" /></value></option>
+    <option name="NUMBER"><value><option name="FOREGROUND" value="f08d49" /></value></option>
+    <option name="OPERATION_SIGN"><value><option name="FOREGROUND" value="f08d49" /></value></option>
+    <option name="PARENTHESES"><value><option name="FOREGROUND" value="ffffff" /></value></option>
+    <option name="SEMICOLON"><value><option name="FOREGROUND" value="b3b3b3" /></value></option>
+    <option name="STRING"><value><option name="FOREGROUND" value="b9d665" /></value></option>
+    <option name="TEXT"><value><option name="FOREGROUND" value="ffffff" /><option name="BACKGROUND" value="000000" /></value></option>
+    <option name="TODO_DEFAULT_ATTRIBUTES"><value><option name="FOREGROUND" value="000000" /><option name="BACKGROUND" value="ffb86c" /><option name="FONT_TYPE" value="1" /></value></option>
+    <option name="TYPE_PARAMETER_NAME"><value><option name="FOREGROUND" value="fae2c8" /></value></option>
+    <option name="TYPO"><value><option name="EFFECT_COLOR" value="ffb86c" /><option name="EFFECT_TYPE" value="4" /></value></option>
+    <option name="WARNINGS_ATTRIBUTES"><value><option name="EFFECT_COLOR" value="ffb86c" /><option name="EFFECT_TYPE" value="4" /></value></option>
+  </attributes>
+</scheme>

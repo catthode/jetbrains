@@ -1,0 +1,16 @@
+<idea-plugin>
+  <id>com.github.catthode.jetbrains</id>
+  <name>Catthode Theme</name>
+  <version>0.1.0</version>
+  <vendor url="https://github.com/catthode">Catthode</vendor>
+  <description><![CDATA[
+    <p>A warm, retro-futuristic OLED theme for JetBrains IDEs.</p>
+    <p>Catthode pairs pure black surfaces with white phosphor text and tungsten-inspired highlights.</p>
+  ]]></description>
+  <idea-version since-build="223"/>
+  <depends>com.intellij.modules.platform</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <themeProvider id="com.github.catthode.jetbrains.theme" path="/themes/catthode.theme.json"/>
+    <bundledColorScheme id="com.github.catthode.jetbrains.scheme" path="/themes/catthode"/>
+  </extensions>
+</idea-plugin>
