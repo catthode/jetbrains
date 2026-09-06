@@ -25,11 +25,20 @@ jobs:
             | head -n 1)
           test -n "$verifier_url"
           curl -fsSL "$verifier_url" -o "$RUNNER_TEMP/verifier.jar"
+      - name: Download a disposable IntelliJ IDEA build
+        run: |
+          curl -fsSL https://download.jetbrains.com/idea/ideaIC-2025.2.1.tar.gz \
+            -o "$RUNNER_TEMP/idea.tar.gz"
+          mkdir -p "$RUNNER_TEMP/idea"
+          tar -xzf "$RUNNER_TEMP/idea.tar.gz" -C "$RUNNER_TEMP/idea"
+          ide_dir=$(find "$RUNNER_TEMP/idea" -mindepth 1 -maxdepth 1 -type d | head -n 1)
+          test -n "$ide_dir"
+          printf 'IDE_DIR=%s\n' "$ide_dir" >> "$GITHUB_ENV"
       - name: Verify against IntelliJ IDEA Community
         run: |
           java -Dplugin.verifier.home.dir="$RUNNER_TEMP/plugin-verifier" \
             -jar "$RUNNER_TEMP/verifier.jar" \
-            check-plugin dist/catthode-jetbrains-0.1.0.jar IC-2025.2.1 \
+            check-plugin dist/catthode-jetbrains-0.1.0.jar "$IDE_DIR" \
             -verification-reports-dir "$RUNNER_TEMP/reports" \
             -verification-reports-formats plain,markdown
       - uses: actions/upload-artifact@v4
