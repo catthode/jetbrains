@@ -41,9 +41,75 @@ jobs:
             check-plugin dist/catthode-jetbrains-0.1.0.jar "$IDE_DIR" \
             -verification-reports-dir "$RUNNER_TEMP/reports" \
             -verification-reports-formats plain,markdown
+      - name: Install disposable GUI tools
+        run: sudo apt-get update && sudo apt-get install -y imagemagick openbox xdotool xvfb
+      - name: Render theme in disposable IntelliJ IDEA session
+        run: |
+          idea_config="$RUNNER_TEMP/idea-config"
+          idea_plugins="$RUNNER_TEMP/idea-plugins"
+          idea_system="$RUNNER_TEMP/idea-system"
+          idea_log="$RUNNER_TEMP/idea-log"
+          sample_project="$RUNNER_TEMP/catthode-sample"
+          mkdir -p \
+            "$idea_config/options" \
+            "$idea_plugins/catthode/lib" \
+            "$idea_system" \
+            "$idea_log" \
+            "$sample_project/src"
+          cp dist/catthode-jetbrains-0.1.0.jar "$idea_plugins/catthode/lib/"
+          printf '%s\n' \
+            "idea.config.path=$idea_config" \
+            "idea.plugins.path=$idea_plugins" \
+            "idea.system.path=$idea_system" \
+            "idea.log.path=$idea_log" \
+            'idea.initially.ask.config=false' \
+            'idea.trust.all.projects=true' \
+            'jb.consents.confirmation.enabled=false' \
+            >> "$IDE_DIR/bin/idea.properties"
+          printf '%s\n' \
+            '<application>' \
+            '  <component name="LafManager" autodetect="false">' \
+            '    <laf class-name="com.intellij.ide.ui.laf.darcula.DarculaLaf" themeId="com.github.catthode.jetbrains.theme" />' \
+            '  </component>' \
+            '</application>' \
+            > "$idea_config/options/laf.xml"
+          printf '%s\n' \
+            'public class Main {' \
+            '    public static void main(String[] args) {' \
+            '        String greeting = "From CRT to OLED";' \
+            '        System.out.println(greeting);' \
+            '    }' \
+            '}' \
+            > "$sample_project/src/Main.java"
+          export IDE_DIR sample_project
+          export SCREENSHOT_PATH="$RUNNER_TEMP/catthode-jetbrains.png"
+          xvfb-run -a bash -eu -o pipefail -c '
+            openbox >"$RUNNER_TEMP/openbox.log" 2>&1 &
+            wm_pid=$!
+            "$IDE_DIR/bin/idea.sh" "$sample_project" >"$RUNNER_TEMP/idea.stdout" 2>&1 &
+            app_pid=$!
+            window_id=$(xdotool search --sync --onlyvisible --class jetbrains-idea | tail -n 1)
+            sleep 25
+            import -window "$window_id" "$SCREENSHOT_PATH"
+            kill "$app_pid" || true
+            kill "$wm_pid" || true
+          '
+          test -s "$SCREENSHOT_PATH"
+          identify -format '%wx%h %k colors, mean=%[fx:mean]\n' "$SCREENSHOT_PATH"
+          test "$(identify -format '%k' "$SCREENSHOT_PATH")" -gt 64
+          test "$(convert "$SCREENSHOT_PATH" -colorspace gray -format '%[fx:mean<0.55?1:0]' info:)" -eq 1
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: plugin-verifier-reports
           path: ${{ runner.temp }}/reports
+          if-no-files-found: ignore
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: catthode-jetbrains-screenshot
+          path: |
+            ${{ runner.temp }}/catthode-jetbrains.png
+            ${{ runner.temp }}/idea.stdout
+            ${{ runner.temp }}/idea-log
           if-no-files-found: ignore

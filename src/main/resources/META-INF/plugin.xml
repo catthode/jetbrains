@@ -7,6 +7,9 @@
     <p>A warm, retro-futuristic OLED theme for JetBrains IDEs.</p>
     <p>Catthode pairs pure black surfaces with white phosphor text and tungsten-inspired highlights.</p>
   ]]></description>
+  <change-notes><![CDATA[
+    <p>Initial release with a complete IDE UI theme and bundled editor color scheme.</p>
+  ]]></change-notes>
   <idea-version since-build="223"/>
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
