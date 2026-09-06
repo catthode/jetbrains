@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.github.catthode.jetbrains</id>
   <name>Catthode Theme</name>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <vendor url="https://github.com/catthode">Catthode</vendor>
   <description><![CDATA[
     <p>A warm, retro-futuristic OLED theme for JetBrains IDEs.</p>

@@ -6,7 +6,7 @@ Catthode provides a coordinated UI and editor theme for IntelliJ IDEA, PyCharm, 
 
 ## Local installation
 
-1. Download `catthode-jetbrains-0.1.0.jar` from `dist/` or the latest GitHub release.
+1. Download `catthode-jetbrains-0.1.1.jar` from `dist/` or the latest GitHub release.
 2. Open **Settings → Plugins**.
 3. Open the gear menu and select **Install Plugin from Disk…**.
 4. Choose the downloaded JAR and restart the IDE when prompted.

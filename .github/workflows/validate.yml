@@ -38,7 +38,7 @@ jobs:
         run: |
           java -Dplugin.verifier.home.dir="$RUNNER_TEMP/plugin-verifier" \
             -jar "$RUNNER_TEMP/verifier.jar" \
-            check-plugin dist/catthode-jetbrains-0.1.0.jar "$IDE_DIR" \
+            check-plugin dist/catthode-jetbrains-0.1.1.jar "$IDE_DIR" \
             -verification-reports-dir "$RUNNER_TEMP/reports" \
             -verification-reports-formats plain,markdown
       - uses: actions/upload-artifact@v4
