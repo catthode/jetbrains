@@ -10,11 +10,12 @@
     "catthodeBorder": "#636363",
     "catthodeText": "#FFFFFF",
     "catthodeMuted": "#B3B3B3",
+    "catthodeWheat": "#FAE2C8",
+    "catthodeTan": "#D9B98C",
     "catthodeGold": "#FFB86C",
     "catthodeAmber": "#FF9E3B",
-    "catthodeRed": "#FF6B6B",
-    "catthodeGreen": "#B9D665",
-    "catthodeBlue": "#9CD9E6"
+    "catthodeClay": "#F08D49",
+    "catthodeRed": "#FF6B6B"
   },
   "ui": {
     "*": {
@@ -22,9 +23,14 @@
       "foreground": "catthodeText",
       "selectionBackground": "catthodeSelection",
       "selectionForeground": "catthodeText",
+      "selectionInactiveBackground": "catthodeSelection",
+      "selectionInactiveForeground": "catthodeText",
       "inactiveBackground": "catthodeSidebar",
+      "disabledBackground": "catthodeSidebar",
       "disabledForeground": "catthodeMuted",
       "borderColor": "catthodeBorder",
+      "focusColor": "catthodeAmber",
+      "infoForeground": "catthodeMuted",
       "separatorColor": "#2D2D2D"
     },
     "ActionButton": {
@@ -33,6 +39,7 @@
       "hoverBorderColor": "catthodeAmber"
     },
     "Button": {
+      "background": "catthodeSidebar",
       "startBackground": "#2D2D2D",
       "endBackground": "#141414",
       "startBorderColor": "#636363",
@@ -40,10 +47,18 @@
       "default": {
         "startBackground": "catthodeAmber",
         "endBackground": "#F08D49",
+        "startBorderColor": "catthodeAmber",
+        "endBorderColor": "catthodeAmber",
+        "focusColor": "catthodeAmber",
+        "focusedBorderColor": "catthodeAmber",
         "foreground": "#000000"
-      }
+      },
+      "disabledBorderColor": "catthodeSelection",
+      "focusedBorderColor": "catthodeSelection",
+      "foreground": "catthodeText"
     },
     "CheckBox": {
+      "background": "catthodeSidebar",
       "Foreground": "catthodeText",
       "Background": "catthodeBase",
       "Selected": {
@@ -55,17 +70,52 @@
       "background": "catthodeSidebar",
       "ArrowButton.background": "catthodeSidebar",
       "ArrowButton.iconColor": "catthodeGold",
-      "nonEditableBackground": "catthodeSidebar"
+      "ArrowButton.disabledIconColor": "catthodeMuted",
+      "ArrowButton.nonEditableBackground": "catthodeSidebar",
+      "modifiedItemForeground": "catthodeAmber",
+      "nonEditableBackground": "catthodeSidebar",
+      "selectionBackground": "catthodeSelection"
     },
     "CompletionPopup": {
       "selectionBackground": "catthodeSelection",
+      "selectionInactiveBackground": "catthodeSelection",
       "selectionForeground": "catthodeText",
       "matchForeground": "catthodeAmber"
+    },
+    "Component": {
+      "borderColor": "catthodeBorder",
+      "disabledBorderColor": "catthodeSelection",
+      "errorFocusColor": "catthodeRed",
+      "focusColor": "catthodeAmber",
+      "focusedBorderColor": "catthodeAmber",
+      "hoverIconColor": "catthodeAmber",
+      "iconColor": "catthodeTan",
+      "inactiveErrorFocusColor": "catthodeRed",
+      "inactiveWarningFocusColor": "catthodeGold",
+      "warningFocusColor": "catthodeGold",
+      "infoForeground": "catthodeMuted"
+    },
+    "Counter": {
+      "background": "catthodeAmber",
+      "foreground": "catthodeBase"
+    },
+    "DragAndDrop": {
+      "borderColor": "catthodeAmber",
+      "rowBackground": "#2A1D12",
+      "areaForeground": "catthodeText",
+      "areaBackground": "catthodeSidebar",
+      "areaBorderColor": "catthodeAmber"
     },
     "Editor": {
       "background": "catthodeBase",
       "foreground": "catthodeText",
-      "shortcutForeground": "catthodeGold"
+      "shortcutForeground": "catthodeGold",
+      "Toolbar.borderColor": "catthodeBorder"
+    },
+    "EditorPane": {
+      "inactiveBackground": "catthodeSidebar",
+      "inactiveForeground": "catthodeMuted",
+      "splitBorder": "catthodeBorder"
     },
     "EditorTabs": {
       "background": "catthodeSidebar",
@@ -73,20 +123,90 @@
       "underlinedTabForeground": "catthodeText",
       "underlineColor": "catthodeAmber",
       "inactiveUnderlineColor": "#636363",
-      "hoverBackground": "catthodeSelection"
+      "hoverBackground": "catthodeSelection",
+      "underTabsBorderColor": "catthodeBorder",
+      "inactiveUnderlinedTabBackground": "catthodeSidebar",
+      "underlinedBorderColor": "catthodeAmber",
+      "inactiveColoredFileBackground": "#00000080",
+      "unselectedBlend": 0.9
+    },
+    "DefaultTabs": {
+      "background": "catthodeSidebar",
+      "borderColor": "catthodeBorder",
+      "hoverBackground": "#2A1D12",
+      "inactiveUnderlineColor": "catthodeBorder",
+      "underlineColor": "catthodeAmber",
+      "underlinedTabBackground": "catthodeSidebar",
+      "underlinedTabForeground": "catthodeText"
     },
     "FileColor": {
+      "Gray": "#211F1D",
       "Yellow": "#241A0E",
-      "Green": "#18200F",
-      "Blue": "#102027",
-      "Rose": "#261117",
-      "Violet": "#241821"
+      "Green": "#261C13",
+      "Blue": "#211A16",
+      "Orange": "#2A1D12",
+      "Rose": "#281713",
+      "Violet": "#241B16"
     },
     "List": {
       "background": "catthodeBase",
       "foreground": "catthodeText",
       "selectionBackground": "catthodeSelection",
-      "selectionForeground": "catthodeText"
+      "selectionForeground": "catthodeText",
+      "selectionInactiveBackground": "catthodeSelection",
+      "selectionInactiveForeground": "catthodeText",
+      "Button.leftRightInset": 8,
+      "Button.separatorInset": 4,
+      "Button.hoverBackground": "#2A1D12",
+      "border": "4,0,4,0",
+      "hoverBackground": "#2A1D12",
+      "rowHeight": 24,
+      "Tag.background": "#2A1D12",
+      "Tag.foreground": "catthodeGold"
+    },
+    "MainToolbar": {
+      "Dropdown.hoverBackground": "#2A1D12",
+      "Dropdown.maxWidth": 350,
+      "Dropdown.pressedBackground": "#2A1D12",
+      "Icon.hoverBackground": "#2A1D12",
+      "Icon.insets": "5,5,5,5",
+      "Icon.pressedBackground": "#2A1D12",
+      "background": "catthodeSidebar",
+      "inactiveBackground": "catthodeSidebar",
+      "separatorColor": "catthodeBorder"
+    },
+    "MainWindow": {
+      "Tab.background": "catthodeSidebar",
+      "Tab.borderColor": "catthodeSidebar",
+      "Tab.selectedBackground": "catthodeBase",
+      "Tab.selectedForeground": "catthodeText",
+      "Tab.hoverBackground": "#2A1D12",
+      "Tab.selectedInactiveBackground": "catthodeBase",
+      "Tab.separatorColor": "catthodeBorder"
+    },
+    "MemoryIndicator": {
+      "allocatedBackground": "#2A1D12",
+      "usedBackground": "#3A2A1C"
+    },
+    "Link": {
+      "background": "catthodeBase",
+      "foreground": "catthodeTan",
+      "activeForeground": "catthodeTan",
+      "focusedBorderColor": "catthodeAmber",
+      "hoverForeground": "catthodeAmber",
+      "pressedForeground": "catthodeGold",
+      "secondaryForeground": "catthodeWheat",
+      "visitedForeground": "catthodeMuted",
+      "Tag.background": "#2A1D12",
+      "Tag.foreground": "catthodeGold"
+    },
+    "Hyperlink.linkColor": "catthodeTan",
+    "Label": {
+      "errorForeground": "catthodeRed",
+      "infoForeground": "catthodeMuted",
+      "warningForeground": "catthodeGold",
+      "background": "catthodeSidebar",
+      "selectedForeground": "catthodeSelection"
     },
     "Menu": {
       "background": "catthodeSidebar",
@@ -94,31 +214,178 @@
       "selectionBackground": "catthodeSelection",
       "selectionForeground": "catthodeText"
     },
+    "PackageSearch": {
+      "SearchResult": {
+        "background": "catthodeBase",
+        "hoverBackground": "#2A1D12",
+        "PackageTag": {
+          "background": "#2A1D12",
+          "foreground": "catthodeWheat",
+          "hoverBackground": "#3A2A1C",
+          "selectedBackground": "#4A2F1B",
+          "selectedForeground": "catthodeWheat"
+        }
+      },
+      "PackageTag": {
+        "background": "#2A1D12",
+        "foreground": "catthodeWheat",
+        "hoverBackground": "#3A2A1C",
+        "selectedBackground": "#3A2A1C",
+        "selectedForeground": "catthodeWheat"
+      },
+      "PackageTagSelected.background": "#4A2F1B",
+      "PackageTagSelected.foreground": "catthodeWheat"
+    },
+    "Banner": {
+      "errorBackground": "#260F0F",
+      "errorBorderColor": "catthodeRed",
+      "errorForeground": "catthodeText",
+      "infoBackground": "#221B14",
+      "infoBorderColor": "catthodeTan",
+      "infoForeground": "catthodeText",
+      "informativeBackground": "#221B14",
+      "informativeBorderColor": "catthodeTan",
+      "informativeForeground": "catthodeText",
+      "successBackground": "#241A0E",
+      "successBorderColor": "catthodeGold",
+      "successForeground": "catthodeText",
+      "warningBackground": "#241A0E",
+      "warningBorderColor": "catthodeGold",
+      "warningForeground": "catthodeText"
+    },
+    "Bookmark": {
+      "Mnemonic": {
+        "iconBackground": "catthodeSidebar",
+        "iconBorderColor": "catthodeAmber",
+        "iconForeground": "catthodeText"
+      },
+      "MnemonicAssigned": {
+        "background": "catthodeSidebar",
+        "borderColor": "catthodeGold",
+        "foreground": "catthodeText"
+      },
+      "MnemonicAvailable": {},
+      "MnemonicCurrent": {
+        "background": "catthodeSelection",
+        "borderColor": "catthodeAmber",
+        "foreground": "catthodeText"
+      },
+      "iconBackground": "catthodeAmber"
+    },
+    "Borders": {
+      "ContrastBorderColor": "catthodeBorder",
+      "color": "catthodeBorder"
+    },
+    "Badge": {
+      "greenOutlineForeground": "catthodeGold",
+      "greenOutlineBorderColor": "catthodeAmber"
+    },
+    "Lesson": {
+      "Badge.newLessonBackground": "catthodeAmber",
+      "Badge.newLessonForeground": "#000000"
+    },
     "Notification": {
       "background": "catthodeSidebar",
       "borderColor": "catthodeBorder",
       "errorBackground": "#260F0F",
       "errorBorderColor": "catthodeRed",
-      "infoBackground": "#102027",
-      "infoBorderColor": "catthodeBlue",
+      "errorForeground": "catthodeText",
+      "infoBackground": "#221B14",
+      "infoBorderColor": "catthodeTan",
       "warningBackground": "#241A0E",
-      "warningBorderColor": "catthodeGold"
+      "warningBorderColor": "catthodeGold",
+      "ToolWindow.errorBackground": "#260F0F",
+      "ToolWindow.errorBorderColor": "catthodeRed",
+      "ToolWindow.errorForeground": "catthodeText",
+      "ToolWindow.informativeBackground": "#221B14",
+      "ToolWindow.informativeBorderColor": "catthodeTan",
+      "ToolWindow.informativeForeground": "catthodeText",
+      "ToolWindow.warningBackground": "#241A0E",
+      "ToolWindow.warningBorderColor": "catthodeGold",
+      "ToolWindow.warningForeground": "catthodeText"
+    },
+    "NotificationsToolwindow.newNotification.background": "catthodeBase",
+    "NotificationsToolwindow.newNotification.hoverBackground": "#2A1D12",
+    "IconBadge": {
+      "errorBackground": "catthodeRed",
+      "infoBackground": "catthodeTan",
+      "successBackground": "catthodeGold",
+      "warningBackground": "catthodeAmber"
     },
     "Panel": {
-      "background": "catthodeBase"
+      "background": "catthodeBase",
+      "foreground": "catthodeText"
     },
+    "PasswordField.background": "catthodeSidebar",
+    "Plugins": {
+      "Button.installBackground": "catthodeBase",
+      "Button.installBorderColor": "catthodeGold",
+      "Button.installFillBackground": "catthodeGold",
+      "Button.installFillForeground": "catthodeBase",
+      "Button.installFocusedBackground": "catthodeBase",
+      "Button.installForeground": "catthodeGold",
+      "Button.updateBackground": "catthodeAmber",
+      "Button.updateBorderColor": "catthodeAmber",
+      "Button.updateForeground": "catthodeBase",
+      "SearchField.background": "catthodeSidebar",
+      "SectionHeader.foreground": "catthodeText",
+      "Tab.hoverBackground": "#2A1D12",
+      "Tab.selectedBackground": "catthodeSelection",
+      "Tab.selectedForeground": "catthodeText",
+      "borderColor": "catthodeBorder",
+      "hoverBackground": "#2A1D12",
+      "lightSelectionBackground": "catthodeSelection",
+      "tagBackground": "catthodeSidebar"
+    },
+    "ProblemsView.projectAnalysisButtonBackground": "catthodeAmber",
     "Popup": {
+      "Advertiser.background": "catthodeSidebar",
+      "Advertiser.fontSizeOffset": -1,
+      "Advertiser.foreground": "catthodeText",
       "Header.activeBackground": "catthodeSelection",
       "Header.inactiveBackground": "catthodeSidebar",
-      "borderColor": "catthodeBorder"
+      "borderColor": "catthodeBorder",
+      "borderWidth": 1,
+      "inactiveBorderColor": "catthodeBorder",
+      "paintBorder": false
     },
+    "ProgressIcon.color": "catthodeAmber",
     "ProgressBar": {
+      "trackColor": "catthodeSelection",
       "foreground": "catthodeAmber",
-      "background": "catthodeSelection"
+      "background": "catthodeSelection",
+      "indeterminateEndColor": "catthodeGold",
+      "indeterminateStartColor": "catthodeAmber",
+      "progressColor": "catthodeAmber",
+      "passedColor": "catthodeGold",
+      "passedEndColor": "catthodeWheat",
+      "warningColor": "catthodeAmber",
+      "warningEndColor": "catthodeGold",
+      "failedColor": "catthodeRed",
+      "failedEndColor": "#FFB0A5"
+    },
+    "RadioButton.background": "catthodeSidebar",
+    "RunWidget": {
+      "background": "catthodeSidebar",
+      "foreground": "catthodeMuted",
+      "iconColor": "catthodeTan",
+      "runIconColor": "catthodeAmber",
+      "runningIconColor": "catthodeGold",
+      "runningBackground": "#2A1D12",
+      "stopBackground": "#260F0F",
+      "hoverBackground": "#3A2A1C",
+      "pressedBackground": "#4A2F1B",
+      "separatorColor": "catthodeBorder"
     },
     "ScrollBar": {
+      "thumbColor": "#63636380",
+      "thumbBorderColor": "#63636380",
+      "hoverThumbColor": "#FF9E3BA0",
+      "hoverThumbBorderColor": "#FF9E3BA0",
       "Mac.thumbColor": "#63636380",
+      "Mac.thumbBorderColor": "#63636380",
       "Mac.hoverThumbColor": "#FF9E3BA0",
+      "Mac.hoverThumbBorderColor": "#FF9E3BA0",
       "Transparent.thumbColor": "#63636380",
       "Transparent.hoverThumbColor": "#FF9E3BA0"
     },
@@ -127,45 +394,171 @@
       "Tab.selectedBackground": "catthodeSelection",
       "Tab.selectedForeground": "catthodeAmber"
     },
+    "SearchMatch": {
+      "startBackground": "#3A2A1C",
+      "endBackground": "#3A2A1C"
+    },
+    "SegmentedButton": {
+      "focusedSelectedButtonColor": "catthodeSidebar",
+      "selectedButtonColor": "catthodeSidebar",
+      "selectedEndBorderColor": "catthodeBorder",
+      "selectedStartBorderColor": "catthodeBorder"
+    },
+    "Separator.separatorColor": "catthodeBorder",
+    "SidePanel.background": "catthodeSidebar",
+    "Slider.background": "catthodeSidebar",
     "StatusBar": {
       "background": "catthodeSidebar",
-      "foreground": "catthodeMuted"
+      "foreground": "catthodeMuted",
+      "borderColor": "catthodeBorder",
+      "hoverBackground": "#2A1D12",
+      "Breadcrumbs.chevronInset": 0
+    },
+    "Tag": {
+      "background": "#2A1D12",
+      "foreground": "catthodeGold"
+    },
+    "TabbedPane": {
+      "background": "catthodeSidebar",
+      "contentAreaColor": "catthodeBorder",
+      "focusColor": "catthodeSelection",
+      "hoverColor": "#2A1D12",
+      "tabHeight": 40,
+      "tabSelectionArc": 4,
+      "underlineColor": "catthodeAmber"
     },
     "Table": {
       "background": "catthodeBase",
       "foreground": "catthodeText",
       "selectionBackground": "catthodeSelection",
       "selectionForeground": "catthodeText",
-      "gridColor": "#2D2D2D"
+      "gridColor": "#2D2D2D",
+      "hoverBackground": "#2A1D12",
+      "lightSelectionBackground": "catthodeSidebar"
     },
+    "TableHeader.bottomSeparatorColor": "catthodeBase",
+    "TextArea.background": "catthodeSidebar",
     "TextField": {
       "background": "catthodeSidebar",
       "foreground": "catthodeText",
       "selectionBackground": "catthodeSelection",
       "selectionForeground": "catthodeText"
     },
+    "ToggleButton": {
+      "buttonColor": "catthodeText",
+      "offBackground": "catthodeSelection",
+      "offForeground": "catthodeMuted",
+      "onBackground": "catthodeAmber",
+      "onForeground": "catthodeBase"
+    },
+    "ToolBar": {
+      "background": "catthodeSidebar",
+      "borderHandleColor": "catthodeGold"
+    },
     "ToolWindow": {
       "Button.hoverBackground": "catthodeSelection",
       "Button.selectedBackground": "#3A2A1C",
       "Button.selectedForeground": "catthodeAmber",
-      "Header.background": "catthodeSidebar"
+      "Header.background": "catthodeSidebar",
+      "Header.borderColor": "catthodeBorder",
+      "Header.inactiveBackground": "catthodeSidebar",
+      "HeaderTab.hoverBackground": "#2A1D12",
+      "HeaderTab.hoverInactiveBackground": "#221B14",
+      "HeaderTab.inactiveUnderlineColor": "catthodeBorder",
+      "HeaderTab.selectedBackground": "catthodeSidebar",
+      "HeaderTab.selectedInactiveBackground": "catthodeSidebar",
+      "HeaderTab.underlineColor": "catthodeAmber",
+      "HeaderTab.underlinedTabBackground": "catthodeSidebar",
+      "HeaderTab.underlinedTabInactiveBackground": "catthodeSidebar",
+      "Stripe.background": "catthodeSidebar",
+      "background": "catthodeSidebar"
+    },
+    "ToolTip": {
+      "background": "catthodeSidebar",
+      "borderColor": "catthodeBorder",
+      "foreground": "catthodeText",
+      "infoForeground": "catthodeMuted"
     },
     "Tree": {
       "background": "catthodeSidebar",
       "foreground": "catthodeText",
+      "border": "4,12,4,12",
       "selectionBackground": "catthodeSelection",
       "selectionForeground": "catthodeText",
+      "selectionInactiveBackground": "catthodeSelection",
+      "selectionInactiveForeground": "catthodeText",
+      "hoverBackground": "#2A1D12",
+      "hoverInactiveBackground": "#221B14",
+      "rowHeight": 24,
       "modifiedItemForeground": "catthodeGold"
-    }
+    },
+    "UiDesigner.Panel.background": "catthodeSidebar",
+    "UiDesigner.Preview.background": "catthodeSidebar",
+    "ValidationTooltip.errorBackground": "catthodeSidebar",
+    "ValidationTooltip.errorBorderColor": "catthodeRed",
+    "ValidationTooltip.warningBackground": "catthodeSidebar",
+    "ValidationTooltip.warningBorderColor": "catthodeGold",
+    "VersionControl": {
+      "FileHistory.Commit.selectedBranchBackground": "catthodeSidebar",
+      "GitLog": {
+        "headIconColor": "catthodeGold",
+        "localBranchIconColor": "catthodeAmber",
+        "otherIconColor": "catthodeTan",
+        "remoteBranchIconColor": "catthodeGold",
+        "tagIconColor": "catthodeAmber"
+      },
+      "Log.Commit.currentBranchBackground": "#2A1D12",
+      "Log.Commit.hoveredBackground": "#2A1D12",
+      "Log.Commit.selectionInactiveBackground": "#2A1D12",
+      "RefLabel.foreground": "catthodeText"
+    },
+    "WelcomeScreen.Projects.actions.background": "#2A1D12",
+    "WelcomeScreen.Projects.background": "#2A1D12",
+    "WelcomeScreen.Projects.selectionBackground": "catthodeSidebar",
+    "WelcomeScreen.Projects.selectionInactiveBackground": "catthodeSidebar",
+    "WelcomeScreen.SidePanel.background": "catthodeSidebar",
+    "WelcomeScreen.separatorColor": "catthodeBorder"
   },
   "icons": {
+    "/icons/new.svg": "/themes/catthode-qodana-new.svg",
+    "/icons/new_dark.svg": "/themes/catthode-qodana-new-dark.svg",
+    "/nodes/project.svg": "/themes/catthode-project.svg",
+    "/general/projectTab.svg": "/themes/catthode-project.svg",
+    "/expui/nodes/module8x8.svg": "/themes/catthode-module8x8.svg",
+    "/expui/nodes/module8x8_dark.svg": "/themes/catthode-module8x8.svg",
     "ColorPalette": {
       "Actions.Red": "#FF6B6B",
-      "Actions.Green": "#B9D665",
-      "Actions.Blue": "#9CD9E6",
+      "Actions.Green": "#FF9E3B",
+      "Actions.Blue": "#D9B98C",
       "Actions.Yellow": "#FFB86C",
       "Actions.Grey": "#B3B3B3",
-      "Actions.GreyInline": "#757575"
+      "Actions.GreyInline": "#B3B3B3",
+      "Actions.GreyInline.Dark": "#B3B3B3",
+      "Objects.BlackText": "#000000",
+      "Objects.Blue": "#D9B98C",
+      "Objects.Green": "#FF9E3B",
+      "Objects.Grey": "#B3B3B3",
+      "Objects.GreenAndroid": "#FF9E3B",
+      "Objects.Pink": "#F08D49",
+      "Objects.Purple": "#F08D49",
+      "Objects.Red": "#FF6B6B",
+      "Objects.RedStatus": "#FF6B6B",
+      "Objects.Yellow": "#FFB86C",
+      "Objects.YellowDark": "#D9B98C",
+      "Checkbox.Background.Default": "#000000",
+      "Checkbox.Background.Default.Dark": "#141414",
+      "Checkbox.Background.Disabled": "#000000",
+      "Checkbox.Background.Disabled.Dark": "#141414",
+      "Checkbox.Background.Selected": "#2A1D12",
+      "Checkbox.Background.Selected.Dark": "#3A2A1C",
+      "Checkbox.Border.Default": "#636363",
+      "Checkbox.Border.Disabled": "#636363",
+      "Checkbox.Border.Selected": "#FF9E3B",
+      "Checkbox.Foreground.Disabled": "#B3B3B3",
+      "Checkbox.Foreground.Disabled.Dark": "#B3B3B3",
+      "Checkbox.Foreground.Selected": "#FF9E3B",
+      "Checkbox.Foreground.Selected.Dark": "#FF9E3B",
+      "Tree.iconColor": "#FFFFFF"
     }
   }
 }

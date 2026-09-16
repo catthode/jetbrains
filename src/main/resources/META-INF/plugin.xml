@@ -1,19 +1,24 @@
 <idea-plugin>
   <id>com.github.catthode.jetbrains</id>
+  <url>https://github.com/catthode/jetbrains</url>
   <name>Catthode Theme</name>
   <version>0.1.1</version>
-  <vendor url="https://github.com/catthode">Catthode</vendor>
+  <vendor url="https://github.com/catthode" email="mail@cattho.de">Catthode</vendor>
   <description><![CDATA[
-    <p>A warm, retro-futuristic OLED theme for JetBrains IDEs.</p>
-    <p>Catthode pairs pure black surfaces with white phosphor text and tungsten-inspired highlights.</p>
+    <p>A warm OLED UI and editor theme for IntelliJ-based IDEs.</p>
+    <ul>
+      <li>Pure-black surfaces with white text and amber, gold, clay, tan, and wheat accents.</li>
+      <li>Editor coverage for common language syntax, diagnostics, terminal output, diffs, and version control.</li>
+    </ul>
   ]]></description>
   <change-notes><![CDATA[
-    <p>Initial release with a complete IDE UI theme and bundled editor color scheme.</p>
+    <p>First public release with the Catthode UI theme, editor scheme, warm terminal colors, and version-control states.</p>
   ]]></change-notes>
   <idea-version since-build="223"/>
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
     <themeProvider id="com.github.catthode.jetbrains.theme" path="/themes/catthode.theme.json"/>
-    <bundledColorScheme id="com.github.catthode.jetbrains.scheme" path="/themes/catthode"/>
+    <bundledColorScheme id="Catthode" path="/themes/catthode"/>
+    <additionalTextAttributes scheme="Catthode" file="colorSchemes/CatthodePython.xml"/>
   </extensions>
 </idea-plugin>
